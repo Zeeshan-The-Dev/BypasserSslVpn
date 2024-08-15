@@ -820,6 +820,7 @@ class MainActivity : BaseActivity(), IGenericCallBack {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 decruptredString = RSAEncryption("book_me.pem" , this).decryptWithPrivateKey(res[i].replace("bypasser://" , ""))
             }
+            Log.e("ServersList:" , decruptredString)
             importBatchConfig(decruptredString)
         }
         binding.pbLoader.visibility = View.GONE
